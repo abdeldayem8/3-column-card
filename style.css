@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+--Transparent-white: hsla(0, 0%, 100%, 0.75);
+--Very-light-gray: hsl(0, 0%, 95%);
+}
+body{
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+    height: calc( 100vh - 1px);
+    background-color: var(--Very-light-gray);
+}
+html,body{
+    overflow-x: hidden;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+}
+@media (min-width:768px){
+    .container{
+        width: 700px;
+    }
+}
+@media (max-width:767px){
+    .container{
+        width: 350px;
+        margin: 1rem auto;
+        margin-top: 25rem;
+    }
+}
+.card{
+    padding: 2rem;
+    
+}
+.card h1{
+    color: var(--Very-light-gray);
+    font-weight: 700;
+}
+.card p{
+    color: var(--Transparent-white);
+    line-height: 1.5;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+.card button{
+    padding: .7rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--Very-light-gray);
+    transition: 0.3s;
+}
+
+.bright{
+    color: var(--Bright-orange);
+}
+.card .bright:hover{
+    background-color: var(--Bright-orange);
+    color: var(--Transparent-white);
+    border: 1px solid var(--Transparent-white);
+}
+.cyan{
+    color: var(--Dark-cyan);
+}
+.cyan:hover{
+    color: var(--Transparent-white);
+    background-color: var(--Dark-cyan);
+    border: 1px solid var(--Transparent-white);
+
+}
+.dark cyan{
+    color: var(--Very-dark-cyan);
+}
+.dark cyan:hover{
+    color: var(--Transparent-white);
+    background-color: var(--Very-dark-cyan);
+    border: 1px solid var(--Transparent-white);
+
+}
+.container .Sedans{
+    background-color:var(--Bright-orange);
+    
+}
+.container .SUVs{
+    background-color: var(--Dark-cyan);
+}
+.container .Luxury{
+    background-color: var(--Very-dark-cyan);
+}
+.attribution{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 0.75rem;
+}
+.attribution a{
+    text-decoration: none;
+}
+@media (max-width:767px){
+    .attribution{
+        position: relative;
+        margin-top: 20px;
+    }
+}
+
