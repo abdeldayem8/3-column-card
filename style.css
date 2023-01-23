@@ -18,23 +18,20 @@ body{
     height: calc( 100vh - 1px);
     background-color: var(--Very-light-gray);
 }
-html,body{
-    overflow-x: hidden;
-}
 .container{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    display: flex;
+    
 }
 @media (min-width:768px){
-    .container{
-        width: 700px;
-    }
+ .container{
+    width: 700px;
+ }
 }
 @media (max-width:767px){
     .container{
-        width: 350px;
+        flex-direction: column;
         margin: 1rem auto;
-        margin-top: 25rem;
+       height: 100%;
     }
 }
 .card{
@@ -109,8 +106,7 @@ html,body{
 }
 @media (max-width:767px){
     .attribution{
-        position: relative;
-        margin-top: 20px;
+       display: none;
     }
 }
 
